@@ -1,0 +1,100 @@
+.body1{
+    border: 10px solid black;
+    border-radius: 20px;
+    text-align: center;
+    background-color: rgb(199, 197, 53);
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+.body2{
+    box-shadow: 10px 10px 5px grey;
+    border: 5px dashed black;
+    border-radius: 15px;
+    text-align: left;
+    background-color: rgb(181, 56, 209);
+    color: black;
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+}
+
+/* Layout: two columns, left column contains .body2 */
+section{
+    display: flex;
+    flex-wrap: wrap;
+}
+.left, .right{
+    box-sizing: border-box;
+    padding: 20px;
+}
+.left{
+    flex: 1 1 50%; /* take left half */
+}
+.right{
+    flex: 1 1 50%; /* take right half */
+}
+
+/* Ensure .body2 fills the left column */
+.left > .body2{
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive: stack columns on narrow screens */
+@media (max-width: 700px){
+    .left, .right{
+        flex: 1 1 100%;
+    }
+}
+
+.body3
+{
+    box-shadow: 10px 10px 5px grey;
+    border: 5px dashed black;
+    border-radius: 15px;
+    text-align: left;
+    background-color: rgb(181, 56, 209);
+    color: black;
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+}
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left, .right{
+    box-sizing: border-box;
+    padding: 20px;
+}
+.left{
+    flex: 1 1 50%; /* take left half */
+}
+.right{
+    flex: 1 1 50%; /* take right half */
+}
+/* Ensure .body3 fills the right column */
+.right > .body3{
+    width: 100%;
+    height: 100%;
+}
+/* Responsive: stack columns on narrow screens */
+@media (max-width: 700px){
+    .left, .right{
+        flex: 1 1 100%;
+    }
+}
+
+.bodyfooter{
+    box-sizing: border-box;
+    padding: 20px;
+    text-size-adjust: 100%;
+    border: 10px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    text-align: center;
+    background-color: rgb(199, 197, 53);
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
